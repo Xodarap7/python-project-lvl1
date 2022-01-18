@@ -40,5 +40,6 @@ def compare_result(user_resolution, even_result):
         print('Correct!')
         return True
     else:
-        print(f"'{user_resolution}' is wrong answer ;(. Correct answer was '{even_result}'.")
+        print(f"'{user_resolution}'"
+              f" is wrong answer ;(. Correct answer was '{even_result}'.")
         return False
