@@ -5,4 +5,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: lint
-        run: poetry run flake8 brain_games
+
+        run: pip3 install poetry && poetry run flake8 brain_games
