@@ -11,6 +11,10 @@ PROGRESSION_LEN = 10
 
 
 def generation_progression() -> list:
+    """
+    Function generates a progression
+    :return: progression
+    """
     start_num = randint(MIN_START_NUM, MAX_START_NUM)
     progression_step = randint(MIN_STEP, MAX_STEP)
     progression = [start_num]
