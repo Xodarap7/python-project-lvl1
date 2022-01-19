@@ -13,8 +13,8 @@ ACTIONS = "+-*"
 def get_question() -> list:
     """
     The prompt line for the question
-    :return:
     """
+
     a = randint(MIN_NUM, MAX_NUM)
     b = randint(MIN_NUM, MAX_NUM)
     action = "".join(choice(ACTIONS) for i in range(1))
@@ -25,11 +25,19 @@ def get_question() -> list:
 
 
 def get_result(question: list) -> int:
+    """
+    The function finds the correct result
+    :param question: given task
+    :return: result
+    """
     a, action, b = question
+
     if action == "+":
         return a + b
+
     elif action == "-":
         return a - b
+
     elif action == "*":
         return a * b
 
@@ -40,7 +48,12 @@ def get_user_value() -> int:
 
 
 def get_resolution(result: int, user_value: int) -> bool:
-
+    """
+    Function checks the result of the user
+    :param result: right result
+    :param user_value: user input
+    :return: resolution
+    """
     if result == user_value:
         print(MSG_RIGHT_ANSWER)
         return True
