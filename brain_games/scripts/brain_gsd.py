@@ -1,18 +1,18 @@
 #!/usr/bin/env python
 from ..cli import welcome_user
-from ..task6_code import start_game as calc
+from ..task7_code import start_game as gsd
 
-MSG_END_GAME = "Let's try again,"
+MSG_LOSE_GAME = "Let's try again,"
 MSG_WIN_GAME = "Congratulations,"
 
 
 def main():
     name = welcome_user()
     print(f"Hello! {name}")
-    result = calc()
+    result = gsd()
 
     if not result:
-        print(f"{MSG_END_GAME} {name}!")
+        print(f"{MSG_LOSE_GAME} {name}!")
     else:
         print(f"{MSG_WIN_GAME} {name}!")
 

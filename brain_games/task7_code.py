@@ -1,13 +1,13 @@
 from random import randint, choice
 
 import prompt
+import math
 
 MSG_WRONG_ANSWER = "is wrong answer ;(. Correct answer was"
 MSG_RIGHT_ANSWER = "Correct!"
 ATTEMPS = 3
 MIN_NUM = 1
-MAX_NUM = 10
-ACTIONS = "+-*"
+MAX_NUM = 100
 
 
 def get_question() -> list:
@@ -17,9 +17,8 @@ def get_question() -> list:
 
     a = randint(MIN_NUM, MAX_NUM)
     b = randint(MIN_NUM, MAX_NUM)
-    action = "".join(choice(ACTIONS) for i in range(1))
-    question = [a, action, b]
-    print(f"Question: {a}{action}{b}")
+    question = [a, b]
+    print(f"Question: {a} {b}")
 
     return question
 
@@ -30,16 +29,8 @@ def get_result(question: list) -> int:
     :param question: given task
     :return: result
     """
-    a, action, b = question
-
-    if action == "+":
-        return a + b
-
-    elif action == "-":
-        return a - b
-
-    elif action == "*":
-        return a * b
+    a, b = question
+    return math.gcd(a, b)
 
 
 def get_user_value() -> int:
