@@ -1,10 +1,8 @@
-from random import randint, choice
-
-import prompt
 import math
+from random import randint
 
-MSG_WRONG_ANSWER = "is wrong answer ;(. Correct answer was"
-MSG_RIGHT_ANSWER = "Correct!"
+from .templates import get_resolution, get_user_value
+
 ATTEMPS = 3
 MIN_NUM = 1
 MAX_NUM = 100
@@ -31,27 +29,6 @@ def get_result(question: list) -> int:
     """
     a, b = question
     return math.gcd(a, b)
-
-
-def get_user_value() -> int:
-
-    return prompt.integer("Your answer: ")
-
-
-def get_resolution(result: int, user_value: int) -> bool:
-    """
-    Function checks the result of the user
-    :param result: right result
-    :param user_value: user input
-    :return: resolution
-    """
-    if result == user_value:
-        print(MSG_RIGHT_ANSWER)
-        return True
-
-    else:
-        print(f"{user_value} {MSG_WRONG_ANSWER} {result},")
-        return False
 
 
 def start_game():
