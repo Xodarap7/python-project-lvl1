@@ -20,5 +20,5 @@ def get_resolution(result: int, user_value: int) -> bool:
         return True
 
     else:
-        print(f"{user_value} {MSG_WRONG_ANSWER} {result},")
+        print(f"{user_value} {MSG_WRONG_ANSWER} {result}")
         return False
