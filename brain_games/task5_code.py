@@ -9,16 +9,13 @@ def even_or_not():
         number = randint(0, 1000)
         print('Answer "yes" if the number is even, otherwise answer "no".')
         print(f'Question: {number}')
-        if number % 2 == 0:
-            even_result = 'yes'
-        else:
-            even_result = 'no'
+        even_result = 'yes' if number % 2 == 0 else 'no'
 
         validation = False
         while validation is False:
             user_resolution = prompt.string('Your answer: ')
             validation = check_validation(user_resolution)
-            if validation is False:
+            if validation is None:
                 print('You can send "yes" or "no"')
         result = compare_result(user_resolution, even_result)
         if result is True:
@@ -29,9 +26,7 @@ def even_or_not():
 
 
 def check_validation(user_resolution):
-    if user_resolution != 'yes' and user_resolution != 'no':
-        return False
-    else:
+    if user_resolution == 'yes' or user_resolution == 'no':
         return True
 
 
