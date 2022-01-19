@@ -1,14 +1,14 @@
 from random import randint
 
 import prompt
- ""
+
 MIN_NUM = 1
 MAX_NUM = 1000
-SUCCESS_COUNT = 0
 
 
 def even_or_not():
-    while success_count < 3:
+    SUCCESS_COUNT = 0
+    while SUCCESS_COUNT < 3:
 
         number = randint(MIN_NUM, MAX_NUM)
         print('Answer "yes" if the number is even, otherwise answer "no".')
@@ -23,9 +23,9 @@ def even_or_not():
                 print('You can send "yes" or "no"')
         result = compare_result(user_resolution, even_result)
         if result:
-            success_count += 1
+            SUCCESS_COUNT += 1
         else:
-            success_count = 0
+            SUCCESS_COUNT = 0
     return True
 
 

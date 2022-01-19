@@ -1,8 +1,7 @@
 from distutils.util import strtobool
 from random import randint
 
-# from prompt_toolkit import prompt
-import prompt
+from prompt_toolkit import prompt
 
 MSG_WELCOME = "Welcome to the Brain Games!"
 MSG_RULES = 'Answer "yes" if the number is even, otherwise answer "no".'

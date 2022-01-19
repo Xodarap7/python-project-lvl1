@@ -1,6 +1,6 @@
 #!/usr/bin/env python
-from ..task5_code import even_or_not
 from ..cli import welcome_user
+from ..task5_code import even_or_not
 
 
 def main():
