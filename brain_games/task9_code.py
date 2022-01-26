@@ -2,7 +2,7 @@ from random import randint
 
 import prompt
 
-from .templates import get_resolution
+from brain_games.templates import get_resolution
 import sympy
 
 ATTEMPS = 3
