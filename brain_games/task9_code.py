@@ -16,7 +16,7 @@ def get_question() -> int:
     """
 
     a = randint(MIN_NUM, MAX_NUM)
-    print(f"Question: {a} is prime?")
+    print(f"Question: {a}")
 
     return a
 
