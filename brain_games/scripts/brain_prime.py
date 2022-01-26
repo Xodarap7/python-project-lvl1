@@ -9,6 +9,7 @@ MSG_WIN_GAME = "Congratulations,"
 def main():
     name = welcome_user()
     print(f"Hello! {name}")
+    print("Answer 'yes' if given number is prime. Otherwise answer 'no'.")
     result = prime()
 
     if not result:
