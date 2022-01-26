@@ -1,9 +1,9 @@
+from math import sqrt
 from random import randint
 
 import prompt
 
 from brain_games.templates import get_resolution
-import sympy
 
 ATTEMPS = 3
 MIN_NUM = 1
@@ -27,7 +27,17 @@ def get_result(question: int) -> bool:
     :param question: given task
     :return: result
     """
-    return sympy.isprime(question)
+    if question < 2:
+        return False
+    if question == 2:
+        return True
+    limit = sqrt(question)
+    i = 2
+    while i <= limit:
+        if question % i == 0:
+            return False
+        i += 1
+    return True
 
 
 def str_to_bool(user_value: str) -> bool:
