@@ -17,7 +17,7 @@ def get_question() -> list:
     b = randint(MIN_NUM, MAX_NUM)
     action = "".join(choice(ACTIONS) for i in range(1))
     question = [a, action, b]
-    print(f"Question: {a}{action}{b}")
+    print(f"Question: {a} {action} {b}")
 
     return question
 
