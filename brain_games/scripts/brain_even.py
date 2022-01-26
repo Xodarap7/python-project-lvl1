@@ -1,6 +1,6 @@
 #!/usr/bin/env python
-from ..cli import welcome_user
-from ..task5_code import start_game as even_or_not
+from brain_games.cli import welcome_user
+from brain_games.task5_code import start_game as even_or_not
 
 
 def main():
@@ -10,6 +10,8 @@ def main():
     result = even_or_not()
     if result is True:
         print(f'Congratulations, {name}!')
+    else:
+        print(f"Let's try again, {name}!")
 
 
 if __name__ == '__main__':
