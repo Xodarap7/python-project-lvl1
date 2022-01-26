@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 from ..cli import welcome_user
-from ..task5_code import even_or_not
+from ..task5_code import start_game as even_or_not
 
 
 def main():
