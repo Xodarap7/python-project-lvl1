@@ -1,0 +1,9 @@
+name: Linter-check
+on: push
+jobs:
+  my-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: lint
+
+        run: pip3 install poetry && poetry run flake8 brain_games
