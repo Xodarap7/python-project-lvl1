@@ -1,7 +1,7 @@
 import math
 from random import randint
 
-from .templates import get_resolution, get_user_value
+from brain_games.templates import get_resolution, get_user_value
 
 ATTEMPS = 3
 MIN_NUM = 1
