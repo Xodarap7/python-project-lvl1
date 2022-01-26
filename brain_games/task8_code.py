@@ -1,6 +1,6 @@
 from random import randint
 
-from .templates import get_resolution, get_user_value
+from brain_games.templates import get_resolution, get_user_value
 
 ATTEMPS = 3
 MIN_START_NUM = -100
@@ -31,9 +31,9 @@ def get_question() -> int:
     """
     progression = generation_progression()
     desired_index = randint(0, PROGRESSION_LEN-1)
-    print(desired_index)
     result = progression.pop(desired_index)
     progression.insert(desired_index, "..")
+
     print(f"Question: {progression}")
 
     return result
