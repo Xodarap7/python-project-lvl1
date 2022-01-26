@@ -46,7 +46,6 @@ def str_to_bool(user_value: str) -> bool:
     into a result format for comparison in
     the function get_resolution
     """
-    
     if user_value == "yes":
         return True
     return False

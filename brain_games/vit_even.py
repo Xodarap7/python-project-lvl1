@@ -5,7 +5,7 @@ from prompt_toolkit import prompt
 
 MSG_WELCOME = "Welcome to the Brain Games!"
 MSG_RULES = 'Answer "yes" if the number is even, otherwise answer "no".'
-MSG_WRONG_ANSWER= "is wrong answer ;(. Correct answer was 'no'."
+MSG_WRONG_ANSWER = "is wrong answer ;(. Correct answer was 'no'."
 ATTEMPS = 3
 MIN_NUM = 1
 MAX_NUM = 1000

@@ -30,7 +30,7 @@ def get_question() -> int:
     The prompt line for the question
     """
     progression = generation_progression()
-    desired_index = randint(0, PROGRESSION_LEN-1)
+    desired_index = randint(0, PROGRESSION_LEN - 1)
     result = progression.pop(desired_index)
     progression.insert(desired_index, "..")
     progression = " ".join(map(str, progression))
