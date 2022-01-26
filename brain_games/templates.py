@@ -10,7 +10,7 @@ def get_user_value() -> int:
     return prompt.integer("Your answer: ")
 
 
-def get_resolution(result: int, user_value: int) -> bool:
+def get_resolution(result, user_value) -> bool:
     """
     Function checks the result of the user
     :param result: right result
@@ -22,5 +22,5 @@ def get_resolution(result: int, user_value: int) -> bool:
         return True
 
     else:
-        print(f"{user_value} {MSG_WRONG_ANSWER} {result}")
+        print(f"'{user_value}' {MSG_WRONG_ANSWER} '{result}'.")
         return False
