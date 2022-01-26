@@ -1,4 +1,6 @@
 import prompt
+
+
 MSG_WRONG_ANSWER = "is wrong answer ;(. Correct answer was"
 MSG_RIGHT_ANSWER = "Correct!"
 
