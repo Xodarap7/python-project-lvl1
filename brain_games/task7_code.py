@@ -28,7 +28,14 @@ def get_result(question: list) -> int:
     :return: result
     """
     a, b = question
-    return math.gcd(a, b)
+    while a != 0 and b != 0:
+        if a > b:
+            a = a % b
+        else:
+            b = b % a
+    return a+b
+
+    # return math.gcd(a, b)
 
 
 def start_game():
