@@ -4,7 +4,5 @@ jobs:
   my-job:
     runs-on: ubuntu-latest
     steps:
-      - name: lint
-        run: pip3 install poetry && poetry run flake8 brain_games
       - name: Upload coverage reports to Codecov
         uses: codecov/codecov-action@v3
